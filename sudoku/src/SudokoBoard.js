@@ -5,7 +5,6 @@ class SudokuBoard extends Component{
     constructor(props){
         super(props);
         this.state={
-            squares: this.props.board,
             isReadable:true
         };
         console.log("SudokuBoard");
@@ -14,7 +13,7 @@ class SudokuBoard extends Component{
     createTable(){
         let table=[];   
         let cells=[];
-        cells=this.state.squares;
+        cells=this.props.board;
         for(let i=0;i<9;i++){
             for(let j=0;j<9;j++){
                 if(cells[i][j]==0)
