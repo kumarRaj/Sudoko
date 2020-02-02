@@ -34,20 +34,17 @@ export default class Sudoko extends Component{
             [3, 0, 5, 2, 0, 6, 3, 0, 0] 
         ];
         console.log(sol);
-        this.setState({
-            board : sol
-        });
+        this.setState({board : sol});
         console.log("state"+this.state.board);
-        this.forceUpdate();
     }
     
     render(){
            return (
             <div> 
                 <SudokuBoard board={this.state.board}/>
-                <button onClick={()=>this.changeBoard()}>Solve me</button>
+                <button onClick={this.changeBoard}>Solve me</button>
             </div>
-        );
+        )
     }
 }
 
